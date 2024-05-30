@@ -1,6 +1,15 @@
     //create an alert box
     window.alert("This page is for employees only!")
 
+    //create an h1 for the reservation div
+let rsvpH1 = document.createElement('h1');
+rsvpH1.textContent = `Reservations as of ${new Date()}`;
+let rsvpDiv = document.getElementById("rsvpHeader");
+//append the element to the div
+rsvpDiv.appendChild(rsvpH1);
+//center the created h1 text
+
+
 //set the background color of the reservation header div
 const rsvp = document.getElementById("rsvpHeader");
 rsvp.style.background = "#1a0000";
@@ -17,17 +26,18 @@ rsvpInfo.style.background = "gray";
 const birthdayDiv = document.getElementById("thirdDiv");
 birthdayDiv.style.background = "gray";
 
-//set background color for form div
+//set text for nav heading
+const myNavH1 = document.getElementById("navH1");
+//align nav heading to the center
+document.getElementById("navH1").style.textAlign = "center";
+//change the color to red
+myNav.style.color = "#cc0000";
 
 
 
 
-//create an h1 for the reservation div
-let rsvpH1 = document.createElement('h1');
-rsvpH1.textContent = `Reservations as of ${new Date()}`;
-let rsvpDiv = document.getElementById("rsvpHeader");
-//append the element to the div
-rsvpDiv.appendChild(rsvpH1);
+
+
 
 //cache an element using querySelector
 const myNav = document.getElementById("navBar");
