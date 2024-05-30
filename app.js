@@ -1,3 +1,6 @@
+    //create an alert box
+    window.alert("This page is for employees only!")
+
 //set the background color of the reservation header div
 const rsvp = document.getElementById("rsvpHeader");
 rsvp.style.background = "#1a0000";
@@ -10,10 +13,18 @@ rsvpNames.style.background = "gray";
 const rsvpInfo = document.getElementById("secondDiv");
 rsvpInfo.style.background = "gray";
 
+//set background color for the third div
+const birthdayDiv = document.getElementById("thirdDiv");
+birthdayDiv.style.background = "gray";
+
+//set background color for form div
+
+
+
 
 //create an h1 for the reservation div
 let rsvpH1 = document.createElement('h1');
-rsvpH1.textContent = `Reservations for ${new Date()}`;
+rsvpH1.textContent = `Reservations as of ${new Date()}`;
 let rsvpDiv = document.getElementById("rsvpHeader");
 //append the element to the div
 rsvpDiv.appendChild(rsvpH1);
@@ -58,5 +69,25 @@ function displayInfo2() {
 document.getElementById("myRsvpList").style.cursor = "pointer";
 
 
-//creati
+//creating a function for the button that will allow a person to enter their name for a reservation
+function signup(){
+    let name
+    let person = prompt("What is the name of the guest?", "Who is reserving a table?")
+    if (person == null || person == ""){
+        name = "The process has been Cancelled.";
+    } else{
+    
+
+        let names = document.createElement('p');
+        names.textContent = `${person} has been scheduled for a reservation.`;
+        let namesDiv = document.getElementById("namesList");
+        namesDiv.appendChild(names)
+
+    }}
+    document.getElementById("namesList").innerHTML= name;
+     //create an h1 for the reservation div
+
+
+
+
 
