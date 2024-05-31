@@ -12,11 +12,15 @@
     
 
 
-
 //set the background color of the reservation list
 const rsvpNames = document.getElementById("rsvpList");
 rsvpNames.style.background = "#80808090";
 rsvpNames.style.borderRadius = "15px"
+rsvpNames.style.height = "400px"
+//adding a background picture
+rsvpNames.style.backgroundImage = "url(https://www.onlygfx.com/wp-content/uploads/2017/12/vip-stamp-4-1024x653.png)";
+rsvpNames.style.backgroundPosition = "center"
+
 
 
 //set the background color for the second div with reservation info
@@ -41,10 +45,6 @@ document.getElementById("navH1").style.textAlign = "center";
 myNavH1.style.color = "#cc0000";
 
 
-//cache an element using querySelector
-const myNav = document.getElementById("navBar");
-myNav.style.color = "#cc0000";
-
 //items to be added to the list of reservations
 const rsvpPeople = ["Amy", "Michelle", "Jamie"]
 
@@ -58,7 +58,76 @@ for (let x in rsvpPeople){
 //people to add to rsvp List
 document.getElementById('myRsvpList').appendChild(rdocfrag);
 
-//changing the width of the div that holds the list of names of people with reservations
+
+
+//adding flex and space around to the nav links
+const myNavLinks = document.getElementById("navLinks");
+myNavLinks.style.display = 'flex';
+myNavLinks.style.justifyContent = 'space-evenly';
+//removing the link bulletpoints
+myNavLinks.style.listStyleType = "none";
+//adding some space to the bottom
+myNavLinks.style.paddingBottom = "100px";
+//moving the links to line up with the nav logo
+myNavLinks.style.marginTop = "-60px";
+
+
+//changing the link colors
+const navLinkColor1 = document.getElementById("link1");
+navLinkColor1.style.color = "white";
+//removing the underline
+const linkOne = document.getElementById("link1");
+linkOne.style.textDecoration = "none";
+//changing the link color
+const navLinkColor2 = document.getElementById("link2");
+navLinkColor2.style.color = "white";
+//removing the underline
+const linkTwo = document.getElementById("link2");
+linkTwo.style.textDecoration = "none";
+//changing the link color
+const navLinkColor3 = document.getElementById("link3");
+navLinkColor3.style.color = "white";
+//removing the underline
+const linkThree = document.getElementById("link3");
+linkThree.style.textDecoration = "none";
+
+// caching nav link elements using querySelector and adding an event listener for mouseover
+document.querySelector("#link1").addEventListener("mouseover", navMouseOver)
+document.querySelector("#link2").addEventListener("mouseover", navMouseOver2)
+document.querySelector("#link3").addEventListener("mouseover", navMouseOver3)
+
+//using querySelector to cache link elements again and add an event listener for mouseout
+document.querySelector("#link1").addEventListener("mouseout", navMouseOut)
+document.querySelector("#link2").addEventListener("mouseout", navMouseOut2)
+document.querySelector("#link3").addEventListener("mouseout", navMouseOut3)
+
+
+//creating a function for the element above to create a hover effect
+function navMouseOver(){
+    document.getElementById("link1").style.color = "#cc0000";
+}
+
+function navMouseOver2(){
+    document.getElementById("link2").style.color = "#cc0000";
+}
+
+function navMouseOver3(){
+    document.getElementById("link3").style.color = "#cc0000";
+}
+
+
+function navMouseOut(){
+    document.getElementById("link1").style.color = "white";
+}
+
+function navMouseOut2(){
+    document.getElementById("link2").style.color = "white";
+}
+
+function navMouseOut3(){
+    document.getElementById("link3").style.color = "white";
+}
+
 
 
 
@@ -66,21 +135,20 @@ document.getElementById('myRsvpList').appendChild(rdocfrag);
 let rsvpDisplayInfo = document.getElementById("clickable1");
 let rsvpDisplayInfo2 = document.getElementById("clickable2");
 //dates to be shwon when clicking on a name with a reservation
-let rsvpdate1 = 'May 31, 2024 at 8:00 PM';
-let rsvpdate2 = 'June 1, 2024 at 5:00 PM';
+let rsvpdate1 = 'June 10, 2024 at 8:00 PM';
+let rsvpdate2 = 'July 4, 2024 at 5:00 PM';
 
-//adding an event listener to listen for a click on the 
-//variabled i created to grab two elements
+//adding an event listener to listen for a click on the variables i created to grab two elements
 rsvpDisplayInfo.addEventListener("click", displayInfo);
 rsvpDisplayInfo2.addEventListener("click", displayInfo2);
 
 //creating a function for the event listener
 function displayInfo() {
-    document.getElementById("clickable1").textContent = `Reservation Date: ${rsvpdate1}`;
+    document.getElementById("clickable1").textContent = `Jasmine's Reservation Date: ${rsvpdate1}. *Has special requests. See notes in calendar.`;
 }
 //creating a function for the event listener
 function displayInfo2() {
-    document.getElementById("clickable2").textContent = `Reservation Date: ${rsvpdate2}`;
+    document.getElementById("clickable2").textContent = `George's Reservation Date: ${rsvpdate2}`;
 }
 
 //let the mouse become a pointer when clicking on a name from the reservation list
@@ -92,7 +160,7 @@ function signup(){
     let name
     let person = prompt("What is the name of the guest?", "Who is reserving a table?")
     if (person == null || person == ""){
-        name = "The process has been Cancelled.";
+        name = "Cancelled.";
     } else{
     
 
