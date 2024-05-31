@@ -7,3 +7,8 @@ body{
     color:#cc0000;
 }
 
+#myRsvpList{
+    text-align: center;
+    list-style-type: none;
+    line-height: 25px;
+}
