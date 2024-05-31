@@ -3,6 +3,9 @@ body{
     background-color: black;
 }
 
+#ransparentPic{
+    opacity: 50%;}
+
 #navH1{
     color:#cc0000;
     font-family: "Tangerine", cursive;

@@ -18,7 +18,7 @@
 
 <body>
     <nav id="navBar">
-       <img src="/photos/foodielogo.png" width="120" height="100"/>
+       <img id="transparentPic" src="/photos/foodielogo.png" width="120" height="100"/>
        <ul id="navLinks">
         <li><a id="link1" href="#">Home</a></li>
         <li><a id="link2" href="#">Calendar</a></li>
@@ -34,6 +34,16 @@
        
     </div>
 
+   
+
+    <div id="secondDiv">
+       <h1 id="secondDivHdr">Book A Reservation!</h1>
+       <p id="namesList">
+
+       </p>
+       <div id="bookingBtn"><button id="myBtn" onclick="signup()">Book Now</button></div>
+    </div>
+
     <div id="rsvpList">
         <ul id="myRsvpList">
             <h1 id="vipHeading">Upcoming VIP Reservations</h1>
@@ -44,17 +54,10 @@
         </ul>
     </div>
 
-    <div id="secondDiv">
-       <h1 id="secondDivHdr">Book A Reservation!</h1>
-       <p id="namesList">
-
-       </p>
-       <div id="bookingBtn"><button  onclick="signup()">Book Now</button></div>
-    </div>
-
     <div id="thirdDiv">
         <h1 id="thirdDivHdr">Birthday Party Bookings & Special VIP Requests</h1>
-        <button><a href="myform.html">Get Started</a></button>
+        
+        <div id="bdayBkBtn" ><button id="myBtn2"><a id="formBtn" href="myform.html">Get Started</a></button></div>
     </div>
     <script src="app.js"></script>
 </body>

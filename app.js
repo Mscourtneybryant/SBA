@@ -10,44 +10,98 @@
     document.getElementById("rsvpHeader").style.textAlign = "center";
     //changing the font for the h1 in the reservation div
     rsvpDiv.style.fontFamily = "Gruppo";
-    rsvpDiv.style.fontSize = "8px";
-    rsvpDiv.style.fontWeight = "100"
+    rsvpDiv.style.fontSize = "10px";
+    rsvpDiv.style.fontWeight = "100";
 
     
     
 
     //centering the buttons
     const myBookingBtn = document.getElementById("bookingBtn");
-    myBookingBtn.style.marginLeft = "295px";
-    myBookingBtn.style.marginTop = "80px";
-    myBookingBtn.style.padding = "40px"
+    myBookingBtn.style.marginLeft = "695px";
+    myBookingBtn.style.marginTop = "240px";
+    myBookingBtn.style.padding = "40px";
+
+
+    //changing the font for the buttons
+    const myButton = document.querySelector("#myBtn");
+    myButton.style.fontFamily = "Gruppo";
+    const myButton2 = document.querySelector("#myBtn2");
+    myButton2.style.fontFamily = "Gruppo";
+    //removing the underline from the button that links to the form page
+    const myFormBtn = document.getElementById("formBtn");
+    myFormBtn.style.textDecoration = "none";
+    myFormBtn.style.paddingLeft = "295px";
+    myFormBtn.style.paddingRight = "350px"
+    myFormBtn.style.marginTop = "80px";
+    //making the cursor turn into a pointer for the buttons
+    document.getElementById("bookingBtn").style.cursor = "pointer";
+    
+
 
 
 //set the background color of the reservation list
 const rsvpNames = document.getElementById("rsvpList");
-rsvpNames.style.background = "#80808090";
+rsvpNames.style.background = "black";
 rsvpNames.style.borderRadius = "15px";
 rsvpNames.style.height = "400px";
 //adding a background picture
 rsvpNames.style.backgroundImage = "url(https://www.onlygfx.com/wp-content/uploads/2017/12/vip-stamp-4-1024x653.png)";
-rsvpNames.style.backgroundPosition = "center"
+rsvpNames.style.backgroundPosition = "center";
+//making the picture inside the reservation list div transaprent
+const vipTPic = document.getElementById("transparentPic");
+rsvpNames.style.opacity = "60%";
+
+
+//adding a hover function that will make the reservation list div light up
+document.querySelector("#rsvpList").addEventListener("mouseover", lightUpDiv);
+document.querySelector("#rsvpList").addEventListener("mouseout", darkenDivAgain)
+
+
+//creating a function for the element above to create a hover effect
+//change of style when a user interacts with the element
+function lightUpDiv(){
+    document.getElementById("rsvpList").style.opacity = "100%";
+}
+
+function darkenDivAgain(){
+    document.getElementById("rsvpList").style.opacity = "60%";
+}
+
+
+
+
+//changing the font for the list of names
+const fontForNames = document.getElementById("myRsvpList");
+fontForNames.style.fontFamily = "Gruppo";
 
 
 
 //set the background color for the second div with reservation info
 const rsvpInfo = document.getElementById("secondDiv");
 rsvpInfo.style.background = "#80808090";
-rsvpInfo.style.borderRadius = "15px"
-rsvpInfo.style.alignItems = "center"
+rsvpInfo.style.borderRadius = "15px";
+rsvpInfo.style.alignItems = "center";
+rsvpInfo.style.backgroundImage = "url(https://images.ctfassets.net/8edxnwlq2x0m/619fsIdwAsQeWnA18sKmF8/e13a264fec1a506ce4642aa5bcdc4725/image__88___1___1_.jpg)";
+rsvpInfo.style.backgroundSize = "cover";
+rsvpInfo.style.height = "400px"
+
 //center heading for second div
 document.getElementById("secondDivHdr").style.textAlign = "center";
+document.getElementById("secondDivHdr").style.fontFamily = "Gruppo";
+document.getElementById("secondDivHdr").style.paddingTop = "40px"
 
 //set background color for the third div
 const birthdayDiv = document.getElementById("thirdDiv");
 birthdayDiv.style.background = "#80808090";
-birthdayDiv.style.borderRadius = "15px"
+birthdayDiv.style.borderRadius = "15px";
+//adding a gif to the third div
+birthdayDiv.style.backgroundImage = "url(https://i.makeagif.com/media/3-14-2017/7u8fRx.gif)"
 //center heading for third div
 document.getElementById("thirdDivHdr").style.textAlign = "center";
+//changing the font for the 3rd div
+document.getElementById("thirdDivHdr").style.fontFamily = "Gruppo";
+
 
 //set text for nav heading
 const myNavH1 = document.getElementById("navH1");
@@ -79,7 +133,7 @@ myNavLinks.style.justifyContent = 'space-evenly';
 //removing the link bulletpoints
 myNavLinks.style.listStyleType = "none";
 //adding some space to the bottom
-myNavLinks.style.paddingBottom = "100px";
+myNavLinks.style.paddingBottom = "40px";
 //moving the links to line up with the nav logo
 myNavLinks.style.marginTop = "-60px";
 
@@ -88,9 +142,6 @@ const vipheadr = document.getElementById("vipHeading");
 vipheadr.style.paddingTop = "60px";
 vipheadr.style.fontFamily = "Tangerine";
 vipheadr.style.fontSize = "50px";
-
-
-
 
 
 
@@ -112,6 +163,11 @@ navLinkColor3.style.color = "white";
 //removing the underline
 const linkThree = document.getElementById("link3");
 linkThree.style.textDecoration = "none";
+
+//changing the font for the links
+linkOne.style.fontFamily = "Gruppo";
+linkTwo.style.fontFamily = "Gruppo";
+linkThree.style.fontFamily = "Gruppo"
 
 // caching nav link elements using querySelector and adding an event listener for mouseover
 document.querySelector("#link1").addEventListener("mouseover", navMouseOver)
