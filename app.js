@@ -1,5 +1,5 @@
     //create an alert box
-    window.alert("This page is for employees only!")
+    window.alert("This page is for The Foodie employees only!")
 
     //create an h1 for the reservation div
     let rsvpH1 = document.createElement('h1');
@@ -8,15 +8,26 @@
     //append the element to the div
     rsvpDiv.appendChild(rsvpH1);
     document.getElementById("rsvpHeader").style.textAlign = "center";
+    //changing the font for the h1 in the reservation div
+    rsvpDiv.style.fontFamily = "Gruppo";
+    rsvpDiv.style.fontSize = "8px";
+    rsvpDiv.style.fontWeight = "100"
+
     
     
+
+    //centering the buttons
+    const myBookingBtn = document.getElementById("bookingBtn");
+    myBookingBtn.style.marginLeft = "295px";
+    myBookingBtn.style.marginTop = "80px";
+    myBookingBtn.style.padding = "40px"
 
 
 //set the background color of the reservation list
 const rsvpNames = document.getElementById("rsvpList");
 rsvpNames.style.background = "#80808090";
-rsvpNames.style.borderRadius = "15px"
-rsvpNames.style.height = "400px"
+rsvpNames.style.borderRadius = "15px";
+rsvpNames.style.height = "400px";
 //adding a background picture
 rsvpNames.style.backgroundImage = "url(https://www.onlygfx.com/wp-content/uploads/2017/12/vip-stamp-4-1024x653.png)";
 rsvpNames.style.backgroundPosition = "center"
@@ -27,6 +38,7 @@ rsvpNames.style.backgroundPosition = "center"
 const rsvpInfo = document.getElementById("secondDiv");
 rsvpInfo.style.background = "#80808090";
 rsvpInfo.style.borderRadius = "15px"
+rsvpInfo.style.alignItems = "center"
 //center heading for second div
 document.getElementById("secondDivHdr").style.textAlign = "center";
 
@@ -70,6 +82,16 @@ myNavLinks.style.listStyleType = "none";
 myNavLinks.style.paddingBottom = "100px";
 //moving the links to line up with the nav logo
 myNavLinks.style.marginTop = "-60px";
+
+//adding some space to the top of the vip header
+const vipheadr = document.getElementById("vipHeading");
+vipheadr.style.paddingTop = "60px";
+vipheadr.style.fontFamily = "Tangerine";
+vipheadr.style.fontSize = "50px";
+
+
+
+
 
 
 //changing the link colors
