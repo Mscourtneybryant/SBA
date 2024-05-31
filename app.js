@@ -31,9 +31,10 @@
     //removing the underline from the button that links to the form page
     const myFormBtn = document.getElementById("formBtn");
     myFormBtn.style.textDecoration = "none";
-    myFormBtn.style.paddingLeft = "295px";
-    myFormBtn.style.paddingRight = "350px"
-    myFormBtn.style.marginTop = "80px";
+
+    myFormBtn.style.paddingLeft = "744px";
+    myFormBtn.style.paddingRight = "670px"
+    myFormBtn.style.paddingTop = "200px";
     //making the cursor turn into a pointer for the buttons
     document.getElementById("bookingBtn").style.cursor = "pointer";
     
@@ -45,12 +46,16 @@ const rsvpNames = document.getElementById("rsvpList");
 rsvpNames.style.background = "black";
 rsvpNames.style.borderRadius = "15px";
 rsvpNames.style.height = "400px";
+
+
 //adding a background picture
 rsvpNames.style.backgroundImage = "url(https://www.onlygfx.com/wp-content/uploads/2017/12/vip-stamp-4-1024x653.png)";
 rsvpNames.style.backgroundPosition = "center";
+rsvpNames.style.backgroundRepeat = "no-repeat"
 //making the picture inside the reservation list div transaprent
 const vipTPic = document.getElementById("transparentPic");
 rsvpNames.style.opacity = "60%";
+
 
 
 //adding a hover function that will make the reservation list div light up
@@ -93,14 +98,17 @@ document.getElementById("secondDivHdr").style.paddingTop = "40px"
 
 //set background color for the third div
 const birthdayDiv = document.getElementById("thirdDiv");
-birthdayDiv.style.background = "#80808090";
+birthdayDiv.style.background = "black";
 birthdayDiv.style.borderRadius = "15px";
-//adding a gif to the third div
-birthdayDiv.style.backgroundImage = "url(https://i.makeagif.com/media/3-14-2017/7u8fRx.gif)"
+birthdayDiv.style.backgroundImage = "url(https://www.aarp.org/content/dam/aarp/home-and-family/family-and-friends/2018/04/1140-dinner-cheers.jpg)";
+birthdayDiv.style.paddingBottom = "275px"
 //center heading for third div
 document.getElementById("thirdDivHdr").style.textAlign = "center";
 //changing the font for the 3rd div
 document.getElementById("thirdDivHdr").style.fontFamily = "Gruppo";
+//adding space to the third div h1
+document.getElementById("thirdDivHdr").style.marginTop = "50px";
+
 
 
 //set text for nav heading
